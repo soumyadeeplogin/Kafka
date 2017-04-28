@@ -1,4 +1,4 @@
-package kafka_consumer;
+package com.kafka.consumer;
 
 import java.io.InputStreamReader;
 import java.util.Arrays;
@@ -10,8 +10,7 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 
 public class SimpleConsumer {
-	public static void main(String[] args) throws Exception {
-
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(new InputStreamReader(System.in));
 		String s = "";
 
@@ -47,5 +46,7 @@ public class SimpleConsumer {
 				// print the offset,key and value for the consumer records.
 				System.out.printf("offset = %d, key = %s, value = %s\n", record.offset(), record.key(), record.value());
 		}
+
 	}
+
 }
